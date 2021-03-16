@@ -21,7 +21,7 @@ export function removeMovieFavorite(payload){//solo envia el parametro del  payl
 
 export function getMovies(titulo) {//recibe el titulo y hace el pedido de info a la Api y se la pasa como payload a la store
   return function (dispatch) {
-    return fetch("http://www.omdbapi.com/?apikey=20dac387&s=" + titulo)
+    return fetch("https://www.omdbapi.com/?apikey=20dac387&s=" + titulo)
       .then(response => response.json())
       .then(json => {
         dispatch({ type: "GET_MOVIES", payload: json });
@@ -36,7 +36,7 @@ export function getMovieDetail(id){ //recibe el id de la peli
 return function(dispatch) { //recibe la funcion dispatch(action)
 
 
-  return fetch("http://www.omdbapi.com/?apikey=20dac387&i=" + id)
+  return fetch("https://www.omdbapi.com/?apikey=20dac387&i=" + id)
   .then(response => response.json())
   .then(json => {
     dispatch({ type: "GET_MOVIE_DETAILS", payload: json });

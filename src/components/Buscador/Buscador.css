@@ -1,33 +1,37 @@
 .cnt {
-    padding-top: 10px;
+  padding-top: 10px;
+}
+h2{
+    text-align: center;
 }
 .form-container {
-    display:flex;
-    flex-direction: row;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-container button {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 .label {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .grid-search {
-display: grid;
-grid-template-columns: repeat(5,auto);
-grid-template-rows: 1fr;
-grid-gap: 5px;
-justify-content: center;    
+  margin-top: 20px;
+  display: flex;
+ flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cell-search {
-display: flex;
-flex-direction: column;
-justify-content: center;
-background-color: black ;
-max-width: 200px;
-min-width: 200PX;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.452);
+  max-width: 200px;
+  min-width: 200px;
+  text-decoration: none;
+  text-align: center;
 }
-

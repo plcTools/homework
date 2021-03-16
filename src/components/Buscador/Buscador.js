@@ -41,14 +41,15 @@ export class Buscador extends Component {
           <button type="submit">BUSCAR</button>
         </form>
         <div className="grid-search">
-          {this.props.movies.map((movie) => {
+          {this.props.movies?.map((movie) => {
             return (
               <div key={movie.imdbID} className="cell-search">
                 <div>
-                  <Link to={`/movie/${movie.imdbID}`}>{movie.Title}</Link>
+                  <Link to={`/movie/${movie.imdbID}`}>
+                    <img src={movie.Poster} width="100%" height="auto" alt={movie.title} />
+                  </Link>
                 </div>
                 <div>
-                  <img src={movie.Poster} width="100px" />
                 </div>
 
                 <button

@@ -1,28 +1,52 @@
-.cnt {
-  padding-top: 10px;
+body {
+  background-image: url("../../img/background.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: auto;
 }
-h2{
-    text-align: center;
-}
+
 .form-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  margin: 50px;
 }
-
+.form-container div {
+  display: flex;
+  align-items: center;
+}
 .form-container button {
   margin-left: 20px;
+  background-color: #00948dbb;
+  border-radius: 3px;
+  border-style: none;
+  color: white;
+  width: 100px;
+  height: 25px;
 }
 .label {
   padding-right: 10px;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  font-size: 25px;
+}
+
+.title_search {
+  background-color: rgba(255, 255, 255, 0.877);
+  border-radius: 5px;
+  border-style: none;
+  height: 25px;
+  font-size: 20px;
 }
 
 .grid-search {
-  margin-top: 20px;
   display: flex;
- flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: center;
+  overflow-x: auto;
+  gap: 2px;
 }
 
 .cell-search {
@@ -31,7 +55,23 @@ h2{
   align-items: center;
   background-color: rgba(0, 0, 0, 0.452);
   max-width: 200px;
-  min-width: 200px;
+  min-width: 100px;
   text-decoration: none;
   text-align: center;
+  margin: 10px;
+}
+.cell-search img {
+  max-height: 290px;
+}
+.cell-search button {
+  background-color: #00948dbb;
+  border-radius: 3px;
+  border-style: none;
+}
+
+@media only screen and (max-width: 760px) {
+
+  .form-container {
+    flex-direction: column;
+  }
 }

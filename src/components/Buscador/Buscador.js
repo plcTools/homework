@@ -23,8 +23,7 @@ export class Buscador extends Component {
   render() {
     const { title } = this.state;
     return (
-      <div>
-        <h2>Buscador</h2>
+      <div class='principal'>
         <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
           <div>
             <label className="label" htmlFor="title">
@@ -33,6 +32,7 @@ export class Buscador extends Component {
             <input
               type="text"
               id="title"
+              className='title_search'
               //autoComplete="off"
               value={title}
               onChange={(e) => this.handleChange(e)}
@@ -44,11 +44,11 @@ export class Buscador extends Component {
           {this.props.movies?.map((movie) => {
             return (
               <div key={movie.imdbID} className="cell-search">
-                <div>
+                
                   <Link to={`/movie/${movie.imdbID}`}>
                     <img src={movie.Poster} width="100%" height="auto" alt={movie.title} />
                   </Link>
-                </div>
+                
                 <div>
                 </div>
 

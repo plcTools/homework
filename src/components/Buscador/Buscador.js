@@ -42,8 +42,9 @@ export class Buscador extends Component {
         </form>
         <div className="grid-search">
           {this.props.movies?.map((movie) => {
-            return (
-              <div key={movie.imdbID} className="cell-search">
+            
+            return (   
+             movie.Poster !== "N/A" && <div key={movie.imdbID} className="cell-search">
                 
                   <Link to={`/movie/${movie.imdbID}`}>
                     <img src={movie.Poster} width="100%" height="auto" alt={movie.title} />
@@ -57,14 +58,16 @@ export class Buscador extends Component {
                     this.props.addMovieFavorite({
                       title: movie.Title,
                       id: movie.imdbID,
+                      Poster: movie.Poster
                     })
                   }
                 >
-                  add to Favorite
+                  Add to Favorite
                 </button>
               </div>
             );
           })}
+
         </div>
       </div>
     );

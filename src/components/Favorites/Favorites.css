@@ -1,3 +1,44 @@
-.cnt {
-    padding-top: 10px;
+h2{
+    text-align: center;
+    width: 100%;
+    color: aliceblue;
 }
+.grid-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: auto;
+    gap: 2px;
+  }
+  
+  .cell-movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.452);
+    max-width: 200px;
+    min-width: 100px;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px 10px 10px 10px; 
+  }
+  
+  .cell-movie img {
+    max-height: 290px;
+    border-radius: 10px 10px 0 0;
+  }
+  .cell-movie button {
+    background-color: #00948dbb;
+    border-radius: 3px;
+    border-style: none;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  @media only screen and (max-width: 760px) {
+  
+    .form-container-favs {
+      flex-direction: column;
+    }
+  }

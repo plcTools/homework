@@ -1,6 +1,7 @@
 body {
   background-image: url("../../img/background.jpg");
   background-size: cover;
+  background-position: 10%;
   height: 100vh;
   width: auto;
 }
@@ -59,14 +60,18 @@ body {
   text-decoration: none;
   text-align: center;
   margin: 10px;
+  border-radius: 10px 10px 10px 10px; 
 }
 .cell-search img {
   max-height: 290px;
+  border-radius: 10px 10px 0 0;
 }
 .cell-search button {
   background-color: #00948dbb;
   border-radius: 3px;
   border-style: none;
+  padding: 5px;
+  margin: 5px;
 }
 
 @media only screen and (max-width: 760px) {

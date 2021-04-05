@@ -7,24 +7,23 @@ import "./Favorites.css";
 export class ConnectedList extends Component {
   render() {
     return (
-      <div>
+      <div class='principal-favs'>
         <h2>Películas Favoritas</h2>
-        <ul>
+        <div className='grid-movies'>
           {this.props.movies.map((movie) => {
             return (
-              <div key = {movie.id}>
+              <div key = {movie.id} className='cell-movie'>
 
                 <Link to={`/movie/${movie.id}`}>
-                     {movie.title}
+                     <img src={movie.Poster} width="100%" height="auto" alt={movie.title} />
                 </Link>
-
                      <div>
                         <button onClick = { () => this.props.removeMovieFavorite({title: movie.title, id: movie.id}) }>Remove</button>
                     </div>
               </div>
             );
           })}
-        </ul>
+        </div>
       </div>
     );
   }
